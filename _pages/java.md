@@ -1,6 +1,6 @@
 ---
 title: Java
 layout: post
-permalink: /java/
+permalink: /Java/
 ---
 This is Java
