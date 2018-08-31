@@ -6,7 +6,7 @@ permalink: ':title/'
 
 markdown: kramdown
 baseurl: "/qa.automation"
-full-version: "http://webjeda.com/karna-full/"
+full-version: "https://77rikin.github.io/qa.automation/"
 
 sass:
     style: compressed
