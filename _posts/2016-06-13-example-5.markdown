@@ -10,7 +10,7 @@ color: 7E57C2
 author: Selenium / Wait
 ---
 `_why We need to Wait`
-When a page is loaded by the brwoser the element which we want to intract with may load at different time intervals. This makes difficult to identify the element and if element is not lacated it will throw an "ElementNotVisibleException" exception.
+When a page is loaded by the browser the element which we want to intract with may load at different time intervals. This makes difficult to identify the element and if element is not lacated it will throw an "ElementNotVisibleException" exception.
 
 Using waits, we can resolve this problem.
 
