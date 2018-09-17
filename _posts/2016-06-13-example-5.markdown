@@ -33,4 +33,4 @@ driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 
 It is avalaible for life of the driver means it will effet through out the program. Implicit wait time is applied to all the element in script.
 Best option when you need to check element is present or not? or An element not being prest at all in the DOM.
-
+ 
