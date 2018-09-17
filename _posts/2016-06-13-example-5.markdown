@@ -10,19 +10,16 @@ color: 7E57C2
 author: Selenium / Wait
 ---
 `_why We need to Wait`
-
 When a page is loaded by the browser the element which we want to intract with may load at different time intervals. This makes difficult to identify the element and if element is not lacated it will throw an "ElementNotVisibleException" exception.
 
 Using waits, we can resolve this problem.
 
 
 `_implicit wait` 
-
 Selenium WebDriver has borrowed the idea of implicit waits from Watir. This means that we can tell selenium that we would like to wait for a certain amount of time before throwing an exception that if it cannot find the element on the page.
 By polling the DOM until the WebElement is found.
 
 `_for Example`
-
 We can declate implicit wait with the time frame of 10 seconds. It means that if the elements is not loacted on the web page within that time frame it will throw an exception(timeout exception).
 
 code:
@@ -34,3 +31,19 @@ driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 It is avalaible for life of the driver means it will effet through out the program. Implicit wait time is applied to all the element in script.
 Best option when you need to check element is present or not? or An element not being prest at all in the DOM.
  
+`_explicit wait`
+The explicit wait is used to tell the web driver to wait for certain conditions to occur before proceeding to next steps in the code. You can pass two things in one statment (nap time or expected condition to occur)
+
+{% highlight ruby %}
+WebElement submotButton = (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(By.id("idOfSubmitButton")));)
+{% endhighlight %}
+
+`_Expeceted Conditions:`
+elementToBeClickable
+elementIsVisible
+elementToBeSelected
+
+explict wait time is applied only to those elements which are intended by us.
+
+`Which one is better option`
+Explicit wait > because works best for AJAX based application. where an element being present in the DOM but not visisble/enabled(clickable).
