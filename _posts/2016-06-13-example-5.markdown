@@ -9,26 +9,25 @@ categories: [one, two]
 color: 7E57C2
 author: Selenium / Wait
 ---
-
-When a page is loaded by the brwoser the element whcih we want to intract with may load at different time intervals. This makes diddicult to identify the element and if element is not lacated it will throw an "ElementNotVisibleException" exception.
+`_why We need to Wait`
+When a page is loaded by the brwoser the element which we want to intract with may load at different time intervals. This makes difficult to identify the element and if element is not lacated it will throw an "ElementNotVisibleException" exception.
 
 Using waits, we can resolve this problem.
 
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+`_implicit wait` 
+Selenium WebDriver has borrowed the idea of implicit waits from Watir. This means that we can tell selenium that we would like to wait for a certain amount of time before throwing an exception that if it cannot find the element on the page.
+By polling the DOM until the WebElement is found.
 
-Jekyll also offers powerful support for code snippets:
+`_for Example`
+We can declate implicit wait with the time frame of 10 seconds. It means that if the elements is not loacted on the web page within that time frame it will throw an exception(timeout exception).
+
+code:
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+It is avalaible for life of the driver means it will effet through out the program. Implicit wait time is applied to all the element in script.
+Best option when you need to check element is present or not? or An element not being prest at all in the DOM.
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
