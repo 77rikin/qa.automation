@@ -35,7 +35,7 @@ Best option when you need to check element is present or not? or An element not 
 The explicit wait is used to tell the web driver to wait for certain conditions to occur before proceeding to next steps in the code. You can pass two things in one statment (nap time or expected condition to occur)
 
 {% highlight ruby %}
-WebElement submotButton = (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(By.id("idOfSubmitButton")));)
+WebElement submotButton = (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(By.id("idOfSubmitButton")));
 {% endhighlight %}
 
 `_Expeceted Conditions:`
