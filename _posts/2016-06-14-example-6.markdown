@@ -11,7 +11,9 @@ author: Selenium / wait
 ---
 
 Selenium defines different timeouts and wait mechanisms. One of the timeouts is focused on the time a web-page need to be loaded - the pageLoadTimeout limits the time that the script allots for web page to be displayed.
-If the page loads within the time the script will be stopeed by TimeOutException.
+
+If the page loads within the time then the script continues.
+If the page does not load within the timeout the script will be stopped by a TimeoutException.
 
 `_how to set the timeout`
 The timeout is set at the driver level.After creating the driver instance (for RED) with the appropriate capabilities.
